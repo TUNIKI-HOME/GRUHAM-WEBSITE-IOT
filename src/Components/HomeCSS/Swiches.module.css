@@ -1,0 +1,119 @@
+/* Container for the entire switches panel */
+.switchesContainer {
+  padding: 40px;
+  background: linear-gradient(130deg, #72ff65, #a75aff);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  transition: transform 0.3s ease;
+}
+
+.switchesContainer:hover {
+  transform: scale(1.02);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header p {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+.devicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Improved layout */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.deviceCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.deviceCard:hover {
+  transform: translateY(-10px);
+}
+
+.deviceInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.deviceIcon {
+  font-size: 2.5em; /* Increased size for better visibility */
+  margin-right: 10px;
+  color: #fff;
+}
+
+.deviceStatus {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.controls input {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 250px;
+  font-size: 1em;
+}
+
+.addDevice,
+.turnOffAll {
+  background: #ff0101;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.addDevice:hover,
+.turnOffAll:hover {
+  background: #ff009d;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .devicesGrid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+  }
+
+  .deviceIcon {
+    font-size: 2em; /* Adjust icon size on smaller screens */
+  }
+
+  .controls input {
+    width: 200px; /* Smaller input width */
+  }
+}

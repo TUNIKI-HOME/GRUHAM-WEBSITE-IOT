@@ -1,0 +1,113 @@
+/* Container Styling */
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Title Animation */
+.title {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeInTitle 2s ease-in-out;
+    position: relative;
+}
+
+@keyframes fadeInTitle {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Image Slider */
+.imageSlider {
+    width: auto;
+    max-width: 1000px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeSlide 3s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+}
+
+@keyframes fadeSlide {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Info Section */
+.infoSection {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    max-width: 800px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeInSection 2s ease;
+}
+
+@keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.infoSection h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.infoSection p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .imageSlider {
+        height: 40vh;
+        max-width: 100%;
+    }
+
+    .infoSection {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .infoSection h2 {
+        font-size: 1.8em;
+    }
+
+    .infoSection p {
+        font-size: 1em;
+    }
+}

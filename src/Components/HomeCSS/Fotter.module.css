@@ -1,0 +1,125 @@
+/* Footer.module.css */
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+    background-color: #444;
+}
+
+.header {
+    
+    text-transform: uppercase;
+}
+
+.header h5 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header em small {
+    font-style: italic;
+    font-size: 1rem;
+    color: #ccc;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.socials li {
+    display: inline;
+}
+
+.socialLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.socialLink i {
+    margin-left: 8px;
+}
+
+.socialLink:hover {
+    color: #f0a500;
+    transform: scale(1.2);
+}
+
+.socialLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f0a500;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.socialLink:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+    }
+
+    .footerContent {
+        padding: 10px;
+    }
+
+    .socials {
+        flex-direction: column;
+    }
+
+    .footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

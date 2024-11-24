@@ -1,0 +1,139 @@
+/* Ledstrip.module.css */
+
+.ledStripContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #232526, #414345);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00e6e6;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.8s ease-in-out;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+.colorControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.slider label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #00e6e6;
+}
+
+.slider input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.intensityControl {
+    margin-bottom: 25px;
+}
+
+.intensityControl label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00e6e6;
+}
+
+.intensityControl input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.centralLightToggle {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #00e6e6;
+    margin-bottom: 25px;
+}
+
+.centralLightToggle input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.modes {
+    display: flex;
+    gap: 12px;
+}
+
+.modeBtn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: buttonPopIn 1s ease;
+}
+
+@keyframes buttonPopIn {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modeBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.customMode { background: #ff6f61; }
+.brightMode { background: #ffd166; }
+.dimmedMode { background: #06d6a0; }
+.gradientMode { background: #118ab2; }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .sliders {
+        max-width: 100%;
+    }
+
+    .modeBtn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}

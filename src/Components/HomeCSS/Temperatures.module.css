@@ -1,0 +1,166 @@
+/* Overall page styling */
+.temperaturePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: auto;
+    background: linear-gradient(to bottom right, #1d1e1f, #414345);
+    color: #000000;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in;
+    background-image: url('https://th.bing.com/th/id/OIP.UuAuScZIA29ph0ITMUgC-AHaEJ?w=626&h=351&rs=1&pid=ImgDetMain');
+    background-attachment: fixed;
+    background-attachment: scroll;
+
+  /* Add a top margin equal to the height of your navbar (assuming 60px) */
+  margin-top: 60px; /* Adjust this value based on your actual navbar height */
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout for larger screens */
+  gap: 20px;
+  justify-items: center; /* Center content in each column */
+}
+
+/* Weather and Firebase components */
+.weatherComponent, .firebaseComponent {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.weatherComponent:hover, .firebaseComponent:hover {
+  transform: scale(1.02);
+}
+
+/* Search input and button styling */
+.searchContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #747272;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #008997;
+}
+
+.button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #008997;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #006f77;
+}
+
+/* Data styling */
+.weatherData, .firebaseComponent p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Weather icon */
+.weatherIcon {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+/* Loader animation for loading state */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  color: #cccccc;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Fade-in animation for the page */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Mobile-first responsiveness (default styles for small screens) */
+@media screen and (max-width: 768px) {
+  .temperaturePage {
+    padding: 20px;
+    margin-top: 60px; /* Ensure there's space for navbar on mobile too */
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .input, .button {
+    width: 100%;
+  }
+}
+
+/* Tablet responsiveness (devices 769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .temperaturePage {
+    padding: 30px;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr 1fr; /* 2-column layout for tablets */
+  }
+
+  .input, .button {
+    width: 100%;
+  }
+}
+
+/* Desktop responsiveness (above 1024px) */
+@media screen and (min-width: 1025px) {
+  .temperaturePage {
+    padding: 40px;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr 1fr; /* 2-column layout for larger screens */
+  }
+
+  .input, .button {
+    width: auto;
+  }
+}

@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+/* Global styles for Authpage */
+.Authpage {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000000e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.formStructor {
+  background-color: #222;
+  border-radius: 15px;
+  height: 500px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* added box-shadow */
+  transition: transform 0.5s ease-in-out;
+  margin: auto;
+  padding: 10px;
+}
+
+.formStructor:hover {
+  transform: scale(1.05); /* added scale animation on hover */
+}
+
+.formStructor::after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 500px;
+  background-image: url("https://img.freepik.com/free-photo/person-choosing-where-they-work-from-hybrid-working-model_23-2149483820.jpg?t=st=1732120983~exp=1732124583~hmac=f4543f99391777818b8656141ea1417aa662e35037928d98dd80c4f213c426e7&w=360");
+  max-height: auto;
+}
+
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  transition: all 0.3s ease;
+  
+}
+ 
+.signup.slideUp {
+  top: 5%;
+  transform: translate(-50%, 0%);
+  transition: all 0.3s ease;
+}
+
+.signup.slideUp .formHolder,
+.signup.slideUp .submitBtn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.signup .formTitle {
+  color: #ffffff;
+  font-size: 1.7em;
+  text-align: center;
+  cursor: pointer;
+  animation: fadeIn 0.6s ease; /* added fade-in animation */
+}
+
+.signup .formHolder {
+  border-radius: 2%;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  
+}
+
+.signup .input {
+  border-radius: 15px;
+  border: 0;
+  outline: none;
+  display: block;
+  height: 30px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.signup .submitBtn {
+  background-color: rgb(72, 255, 0);
+  color: rgba(256, 256, 256, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  max-height: auto;
+  color: #000000;
+}
+
+.signup .submitBtn:hover {
+  background-color: rgb(255, 0, 0);
+  transform: scale(1.1); /* added scale effect on hover */
+}
+
+.login {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:0 4px 10px rgba(209, 133, 133, 0.815);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.login::before {
+  border-radius: 60%;
+  z-index: 5;
+  transition: all 0.3s ease;
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 500px;
+  background-image: url("https://img.freepik.com/free-photo/person-choosing-where-they-work-from-hybrid-working-model_23-2149483820.jpg?t=st=1732120983~exp=1732124583~hmac=f4543f99391777818b8656141ea1417aa662e35037928d98dd80c4f213c426e7&w=360");
+  max-height: auto;
+}
+
+.login .center {
+  position: absolute;
+  top: calc(50% - 10%);
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.login .formTitle {
+  margin-top: 0px;
+  color: #ffffff;
+  font-size: 1.7em;
+  text-align: center;
+  cursor: pointer;
+  animation: fadeIn 0.6s ease; /* added fade-in animation */
+}
+
+.login .formHolder {
+  border-radius: 15px;
+  border: 6px solid #eee;
+  margin-top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  max-height: auto;
+}
+
+.login .submitBtn {
+  background-color: #e90b0b;
+  color: rgba(256, 256, 256, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  color: #000000;
+}
+
+.login .submitBtn:hover {
+  background-color: rgb(70, 240, 18);
+  transform: scale(1.1); /* added scale effect on hover */
+}
+
+.login.slideUp {
+  top: 90%;
+  transition: all 0.3s ease;
+}
+
+.login.slideUp .center {
+  top: 10%;
+  transform: translate(-50%, 0%);
+  transition: all 0.3s ease;
+}
+
+.login.slideUp .formHolder,
+.login.slideUp .submitBtn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

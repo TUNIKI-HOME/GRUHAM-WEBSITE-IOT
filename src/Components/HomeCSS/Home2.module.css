@@ -1,0 +1,76 @@
+/* Home2.module.css */
+.homeSystem {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two-column layout */
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #faf9f9;
+  }
+  
+  .statusItem {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Items arranged vertically */
+    justify-content: space-between;
+    color: whitesmoke;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .device {
+    text-align: left;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .device:hover {
+    background-color: #333;
+    cursor: pointer;
+  }
+  
+  .span {
+    padding: 2%;
+    margin: auto 0;
+  }
+  
+  .temperature {
+    grid-column: span 2; /* Make the temperature section span two columns */
+  }
+  
+  .spant {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .status {
+      grid-template-columns: 1fr; /* Stack items vertically on small screens */
+    }
+  
+    .device {
+      font-size: 1rem;
+    }
+  
+    .span {
+      font-size: 0.9rem;
+    }
+  
+    .statusItem {
+      padding: 15px;
+    }
+  }
+  
